@@ -27,7 +27,8 @@
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
-      "App/*": ["./src/App/*"]
+      "App/*": ["./src/App/*"],
+      "assets/*": ["./src/assets/*"]
     }
   },
   "include": ["src"]
