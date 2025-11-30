@@ -1,4 +1,5 @@
 import React, { type ComponentProps } from "react";
+import { getTextStyle } from "config/textStyles";
 
 type TextElement =
   | "p"
@@ -15,18 +16,32 @@ export interface TextProps {
   as?: TextElement;
   children?: React.ReactNode;
   className?: string;
+  typography?: string;
 }
 
 export const Text: React.FC<TextProps> = ({
-  as: TextElement = "p",
+  as: TextElementComponent = "p",
   children,
   className = "",
+  typography = "Regular/14",
   ...rest
 }) => {
+  const getTypographyStylesObject = (typographyKeys: string) => {
+    const textStyle = getTextStyle(typographyKeys);
+    if (!textStyle) return { className };
+
+    return {
+      className,
+      style: textStyle,
+    };
+  };
+
+  const typographyStyles = getTypographyStylesObject(typography);
+
   return (
-    <TextElement className={className} {...rest}>
+    <TextElementComponent {...typographyStyles} {...rest}>
       {children}
-    </TextElement>
+    </TextElementComponent>
   );
 };
 

@@ -28,7 +28,8 @@
     "baseUrl": ".",
     "paths": {
       "App/*": ["./src/App/*"],
-      "assets/*": ["./src/assets/*"]
+      "assets/*": ["./src/assets/*"],
+      "config/*": ["./src/config/*"]
     }
   },
   "include": ["src"]

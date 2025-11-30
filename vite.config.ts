@@ -47,6 +47,7 @@ export default defineConfig({
     alias: {
       App: path.resolve(__dirname, "./src/App"),
       assets: path.resolve(__dirname, "./src/assets"),
+      config: path.resolve(__dirname, "./src/config"),
     },
   },
 });

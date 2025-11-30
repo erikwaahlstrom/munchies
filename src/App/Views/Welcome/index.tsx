@@ -6,7 +6,7 @@ export const Welcome = () => {
     <div className="min-h-screen w-full p-6">
       <Logo />
       {/* Using Text component with Tailwind classes */}
-      <Text as="h1" className="text-base-red text-4xl font-bold mb-4">
+      <Text as="h1" typography="Regular/48" className="text-base-red">
         Welcome Page
       </Text>
 
