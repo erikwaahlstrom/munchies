@@ -1,6 +1,6 @@
 export const Welcome = () => {
   return (
-    <div>
+    <div className="min-h-screen w-full p-8">
       {/* Text colors */}
       <h1 className="text-base-red text-4xl font-bold mb-4">Welcome Page</h1>
 
