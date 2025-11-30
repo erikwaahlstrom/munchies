@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "FONT_NAME Regular";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("FONT_NAME Regular"), local("FONT_NAME Regular"),
+    url("assets/fonts/FONT_NAME.woff2") format("woff2"),
+    url("assets/fonts/FONT_NAME.woff") format("woff");
+}
