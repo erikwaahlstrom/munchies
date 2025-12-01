@@ -4,14 +4,17 @@ import * as api from "../api";
 export interface Restaurant {
   id: string;
   name: string;
-  [key: string]: unknown; // Allow other properties
+  filter_ids?: string[];
+  delivery_time_minutes?: number;
+  price_range_id?: string;
+  [key: string]: unknown;
 }
 
 export interface Filter {
   id: string;
   name: string;
   image_url: string;
-  [key: string]: unknown; // Allow other properties
+  [key: string]: unknown;
 }
 
 const useFetchDataById = <T,>(
@@ -23,19 +26,17 @@ const useFetchDataById = <T,>(
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Only run if an ID is provided
     if (!id) {
       setData(null);
       setIsLoading(false);
       return;
     }
 
-    const loadData = async () => {
+    const load = async () => {
       setIsLoading(true);
       setError(null);
       try {
-        const result = await fetchFunction(id);
-        setData(result);
+        setData(await fetchFunction(id));
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
@@ -43,81 +44,134 @@ const useFetchDataById = <T,>(
       }
     };
 
-    loadData();
-  }, [id, fetchFunction]); // Re-run whenever the ID changes
+    load();
+  }, [id, fetchFunction]);
 
   return { data, isLoading, error };
 };
 
-// --- Specific Hooks for each ID-dependent endpoint ---
-
-// Hook for: GET /restaurants/{id}
 export const useRestaurant = (id: string | null) => {
-  // We pass the specific service function as an argument
   return useFetchDataById<Restaurant>(id, api.getRestaurantById);
 };
 
-// Hook for: GET /open/{id}
 export const useRestaurantOpenStatus = (id: string | null) => {
   return useFetchDataById<{ open: boolean }>(id, api.getRestaurantOpenStatus);
 };
 
-// Hook for: GET /price-range/{id}
 export const usePriceRange = (id: string | null) => {
   return useFetchDataById<{ priceRange: string }>(id, api.getPriceRangeById);
 };
 
-// Hook for: GET /filters
+export const useAllPriceRanges = (restaurants: Restaurant[]) => {
+  const [priceRanges, setPriceRanges] = useState<
+    Array<{ id: string; data: { range: string } }>
+  >([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetch = async () => {
+      if (!Array.isArray(restaurants) || restaurants.length === 0) {
+        setPriceRanges([]);
+        setIsLoading(false);
+        return;
+      }
+
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        const ids = new Set<string>();
+        restaurants.forEach((r) => {
+          const id = r.price_range_id;
+          if (typeof id === "string" && id) ids.add(id);
+        });
+
+        const uniqueIds = Array.from(ids);
+        if (uniqueIds.length === 0) {
+          setPriceRanges([]);
+          setIsLoading(false);
+          return;
+        }
+
+        const results = await Promise.all(
+          uniqueIds.map(async (id) => {
+            try {
+              const data = await api.getPriceRangeById(id);
+              return { id, data: data as { range: string } };
+            } catch (err) {
+              console.error(`Error fetching price range ${id}:`, err);
+              return null;
+            }
+          })
+        );
+
+        setPriceRanges(
+          results.filter(
+            (item): item is { id: string; data: { range: string } } =>
+              item !== null
+          )
+        );
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "An error occurred");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetch();
+  }, [restaurants]);
+
+  return { priceRanges, isLoading, error };
+};
+
 export const useAllFilters = () => {
   const [filters, setFilters] = useState<Filter[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadFilters = async () => {
+    const load = async () => {
       setIsLoading(true);
       setError(null);
       try {
         const result = await api.getAllFilters();
-        // API returns { filters: [...] }, so extract the filters array
-        const filtersData = (result as { filters: Filter[] }).filters || result;
-        setFilters(Array.isArray(filtersData) ? filtersData : []);
+        const data = (result as { filters: Filter[] }).filters || result;
+        setFilters(Array.isArray(data) ? data : []);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
         setIsLoading(false);
       }
     };
-    loadFilters();
-  }, []); // Empty dependency array: runs only once when the component mounts
+    load();
+  }, []);
 
   return { filters, isLoading, error };
 };
 
-// --- Hook for GET /restaurants (Get All) ---
 export const useAllRestaurants = () => {
-  // This hook is simpler as it has no dependencies
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadRestaurants = async () => {
+    const load = async () => {
       setIsLoading(true);
       setError(null);
       try {
         const result = await api.getAllRestaurants();
-        const restaurantsData =
+        const data =
           (result as { restaurants: Restaurant[] }).restaurants || result;
-        setRestaurants(Array.isArray(restaurantsData) ? restaurantsData : []);
+        setRestaurants(Array.isArray(data) ? data : []);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
         setIsLoading(false);
       }
     };
-    loadRestaurants();
-  }, []); // Empty dependency array: runs only once when the component mounts
+    load();
+  }, []);
 
   return { restaurants, isLoading, error };
 };
