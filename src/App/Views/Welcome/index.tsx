@@ -22,7 +22,7 @@ export const Welcome = () => {
         </Text>
       </div>
 
-      <LinkButton to="/resturants">Continue</LinkButton>
+      <LinkButton to="/resturants" typography="Bold/16">Continue</LinkButton>
     </div>
   );
 };
