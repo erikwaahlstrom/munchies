@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { Text } from "App/components/Text";
 import { Logo } from "assets/media/Icons/Logo";
+import { LinkButton } from "App/components/LinkButton";
 
 export const Welcome = () => {
   return (
@@ -22,25 +22,7 @@ export const Welcome = () => {
         </Text>
       </div>
 
-      <Link
-        to="/resturants"
-        className="inline-flex items-center justify-center gap-2"
-        style={{
-          width: "327px",
-          height: "56px",
-          borderRadius: "8px",
-          borderWidth: "1px",
-          paddingTop: "20px",
-          paddingRight: "24px",
-          paddingBottom: "20px",
-          paddingLeft: "24px",
-          gap: "8px",
-        }}
-      >
-        <Text typography="Bold/14" className="text-base-white">
-          Go to Restaurants
-        </Text>
-      </Link>
+      <LinkButton to="/resturants">Continue</LinkButton>
     </div>
   );
 };
