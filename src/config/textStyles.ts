@@ -27,6 +27,15 @@ export const textStyles: Record<string, TextStyle> = {
     letterSpacing: "-0.05rem",
     textTransform: "none",
   },
+  "Bold/14": {
+    fontFamily: '"Inter", sans-serif',
+    fontStyle: "normal",
+    fontSize: "1.4rem",
+    fontWeight: 700,
+    lineHeight: "150%",
+    letterSpacing: "-0.05rem",
+    textTransform: "none",
+  },
 };
 
 export const getTextStyle = (styleKey: string): TextStyle | undefined => {

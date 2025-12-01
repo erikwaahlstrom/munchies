@@ -4,13 +4,23 @@ import { Logo } from "assets/media/Icons/Logo";
 
 export const Welcome = () => {
   return (
-    <div className="min-h-screen w-full p-6">
+    <div className="min-h-screen w-full p-6 flex flex-col items-left justify-between">
       <Logo />
 
-      <Text as="h1" typography="Regular/48" className="text-base-white">
-        Treat
-        <br /> yourself.
-      </Text>
+      <div>
+        <Text
+          as="h1"
+          typography="Regular/48"
+          className="text-base-white mb-[16px]"
+        >
+          Treat
+          <br /> yourself.
+        </Text>
+        <Text typography="Regular/14" className="text-base-white">
+          Find the best restaurants in your city and get it delivered to your
+          place!
+        </Text>
+      </div>
 
       <Link
         to="/resturants"
@@ -27,7 +37,7 @@ export const Welcome = () => {
           gap: "8px",
         }}
       >
-        <Text typography="Regular/14" className="text-base-white">
+        <Text typography="Bold/14" className="text-base-white">
           Go to Restaurants
         </Text>
       </Link>
