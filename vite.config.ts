@@ -48,6 +48,7 @@ export default defineConfig({
       App: path.resolve(__dirname, "./src/App"),
       assets: path.resolve(__dirname, "./src/assets"),
       config: path.resolve(__dirname, "./src/config"),
+      hooks: path.resolve(__dirname, "./src/hooks"),
     },
   },
 });
