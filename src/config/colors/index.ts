@@ -13,5 +13,9 @@ export const customColors = {
   "red-tinted": "#FAF1F1",
 
   // Backgrounds
-  "ui-background-primary": "#00703A", // Same as base-green
+  "ui-background-primary": "#FAFAFA",
+  "ui-background-secondary": "#00703A",
+
+  // Opacity colors (black)
+  "base-black-40": "rgba(8, 8, 8, 0.40)",
 } as const;

@@ -4,13 +4,13 @@ import { LinkButton } from "App/components/LinkButton";
 
 export const Welcome = () => {
   return (
-    <div className="min-h-screen w-full p-6 flex flex-col items-left justify-between">
+    <div className="min-h-screen w-full p-6 flex flex-col items-left justify-between bg-ui-background-secondary">
       <Logo />
 
       <div>
         <Text
           as="h1"
-          typography="Regular/48"
+          typography="Bold/48"
           className="text-base-white mb-[16px]"
         >
           Treat
@@ -22,7 +22,9 @@ export const Welcome = () => {
         </Text>
       </div>
 
-      <LinkButton to="/resturants" typography="Bold/16">Continue</LinkButton>
+      <LinkButton to="/resturants" typography="Bold/16">
+        Continue
+      </LinkButton>
     </div>
   );
 };

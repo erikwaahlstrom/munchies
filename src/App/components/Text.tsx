@@ -22,7 +22,7 @@ export interface TextProps {
 export const Text: React.FC<TextProps> = ({
   as: TextElementComponent = "p",
   children,
-  className = "",
+  className = "text-base-black",
   typography = "Regular/14",
   ...rest
 }) => {

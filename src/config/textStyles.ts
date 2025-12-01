@@ -10,15 +10,7 @@ export interface TextStyle {
 
 export const textStyles: Record<string, TextStyle> = {
   // Regular
-  "Regular/48": {
-    fontFamily: '"Inter", sans-serif',
-    fontStyle: "normal",
-    fontSize: "4.8rem",
-    fontWeight: 760,
-    lineHeight: "100%",
-    letterSpacing: "-0.1rem",
-    textTransform: "none",
-  },
+
   "Regular/14": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
@@ -28,7 +20,28 @@ export const textStyles: Record<string, TextStyle> = {
     letterSpacing: "-0.05rem",
     textTransform: "none",
   },
+
+  // Caps
+  "Caps-Regular/12": {
+    fontFamily: '"Inter", sans-serif',
+    fontStyle: "normal",
+    fontSize: "1.2rem",
+    fontWeight: 590,
+    lineHeight: "100%",
+    letterSpacing: "-0.05rem",
+    textTransform: "uppercase",
+  },
+
   // Bold
+  "Bold/48": {
+    fontFamily: '"Inter", sans-serif',
+    fontStyle: "normal",
+    fontSize: "4.8rem",
+    fontWeight: 760,
+    lineHeight: "100%",
+    letterSpacing: "-0.1rem",
+    textTransform: "none",
+  },
   "Bold/16": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
