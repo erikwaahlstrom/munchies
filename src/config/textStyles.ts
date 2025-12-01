@@ -10,16 +10,16 @@ export interface TextStyle {
 
 export const textStyles: Record<string, TextStyle> = {
   "Regular/48": {
-    fontFamily: "inherit",
+    fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
     fontSize: "4.8rem",
     fontWeight: 760,
     lineHeight: "100%",
-    letterSpacing: "-0.01rem",
+    letterSpacing: "-0.1rem",
     textTransform: "none",
   },
   "Regular/14": {
-    fontFamily: "inherit",
+    fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
     fontSize: "1.4rem",
     fontWeight: 400,
