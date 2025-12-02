@@ -16,26 +16,34 @@ export const CTACard = ({
   const deliveryTimeLabel = `${delivery_time_minutes} min`;
 
   return (
-    <div key={id} className="p-4 border border-base-gray rounded-lg">
-      <Badge status={isOpen} />
-      <Badge label={deliveryTimeLabel} />
+    <div
+      key={id}
+      className="p-4 border border-base-gray rounded-lg relative overflow-hidden min-h-52 flex flex-col justify-between"
+    >
+      <div>
+        <Badge status={isOpen} />
+        <Badge label={deliveryTimeLabel} />
 
-      <Image
-        src={image_url}
-        key={id}
-        loading="lazy"
-        alt={name}
-        placeholder=""
-        height="100%"
-      />
+        <div className="absolute -top-6 -right-4">
+          <Image
+            src={image_url}
+            key={id}
+            loading="lazy"
+            alt={name}
+            className="object-cover w-35 h-35"
+          />
+        </div>
+      </div>
 
-      {typeof delivery_time_minutes === "number" && (
-        <Text typography="Regular/14" className="text-base-black-40">
-          {delivery_time_minutes} min delivery
-        </Text>
-      )}
+      <div>
+        {typeof delivery_time_minutes === "number" && (
+          <Text typography="Regular/14" className="text-base-black-40">
+            {delivery_time_minutes} min delivery
+          </Text>
+        )}
 
-      <CTAFooter name={name} />
+        <CTAFooter name={name} />
+      </div>
     </div>
   );
 };

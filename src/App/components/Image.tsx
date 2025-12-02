@@ -1,24 +1,24 @@
 const Image = ({
   alt,
-  height,
   key,
   loading = "lazy",
   src,
+  className,
 }: {
   alt: string;
-  height: string;
   key: string;
   loading: "lazy" | "eager";
   src: string;
-  placeholder: string;
+  placeholder?: string;
+  className?: string;
 }) => {
   return (
     <img
       alt={alt}
-      height={height}
       key={key}
       loading={loading}
       src={src}
+      className={className}
     />
   );
 };
