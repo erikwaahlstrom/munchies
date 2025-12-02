@@ -18,6 +18,7 @@ export const customColors = {
 
   // Opacity colors (black)
   "base-black-10": "rgba(8, 8, 8, 0.10)",
+  "base-black-40": "rgba(8, 8, 8, 0.40)",
 
   // Opacity colors (white)
   "base-white-80": "rgba(255, 255, 255, 0.80)",

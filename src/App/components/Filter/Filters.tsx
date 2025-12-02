@@ -47,7 +47,7 @@ const Filters = ({
 
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 bg-base-white p-6 rounded-lg border border-base-black-10">
       {/* Food type filters */}
       {filters.length > 0 && (
         <div className="flex flex-col gap-3">
