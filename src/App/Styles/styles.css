@@ -21,11 +21,8 @@ body {
 
 button {
   padding: 0;
-  border: none;
   font: inherit;
-  color: inherit;
   cursor: pointer;
-  background-color: transparent;
 }
 
 a {

@@ -5,6 +5,7 @@ import { useFilterParams } from "../../../hooks/useFilterParams";
 import { filterRestaurants } from "../../../utils/filterRestaurants";
 import Filters from "App/components/Filter/Filters";
 import { ResturantsListing } from "App/components/ResturantsListing";
+import { CTAButton } from "App/components/CTAButton";
 
 export const Resturants = () => {
   const { restaurants, isLoading, error } = useAllRestaurants();
@@ -46,6 +47,8 @@ export const Resturants = () => {
   return (
     <div className="min-h-screen w-full p-6 flex flex-col items-left">
       <Logo className="text-base-black" />
+
+      <CTAButton />
 
       <div className="flex flex-col gap-3 mt-6">
         <Filters

@@ -10,7 +10,7 @@ export const customColors = {
   "base-blue": "#007BFF",
 
   // Semantic colors
-  "red-tinted": "#FAF1F1",
+  "green-tinted": "#00703A",
 
   // Backgrounds
   "ui-background-primary": "#FAFAFA",
@@ -18,4 +18,7 @@ export const customColors = {
 
   // Opacity colors (black)
   "base-black-40": "rgba(8, 8, 8, 0.40)",
+
+  // Opacity colors (white)
+  "base-white-10": "rgba(0, 0, 0, 0.10)",
 } as const;
