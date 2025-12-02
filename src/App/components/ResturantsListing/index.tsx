@@ -35,16 +35,17 @@ export const ResturantsListing = ({
             },
             i
           ) => (
-            <CTACard
-              key={`${id}-${i}`}
-              delivery_time_minutes={delivery_time_minutes}
-              filter_ids={filter_ids}
-              id={id}
-              image_url={image_url}
-              name={name}
-              price_range_id={price_range_id}
-              rating={rating}
-            />
+            <div key={`${id}-${i}`}>
+              <CTACard
+                delivery_time_minutes={delivery_time_minutes}
+                filter_ids={filter_ids}
+                id={id}
+                image_url={image_url}
+                name={name}
+                price_range_id={price_range_id}
+                rating={rating}
+              />
+            </div>
           )
         )}
       </div>
