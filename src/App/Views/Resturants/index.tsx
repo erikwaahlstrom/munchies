@@ -47,15 +47,15 @@ export const Resturants = () => {
     <div className="min-h-screen w-full p-10">
       <Logo className="text-base-black mb-12" />
 
-      <div className="grid grid-cols-[250px_1fr] gap-5 [grid-template-areas:'filters_restaurants']">
-        <div className="[grid-area:filters]">
+      <div className="flex flex-col lg:grid lg:gap-5 lg:grid-cols-[250px_1fr] lg:[grid-template-areas:'filters_restaurants'] gap-5">
+        <div className="lg:[grid-area:filters]">
           <Filters
             isFilterActive={isFilterActive}
             handleFilterChange={handleFilterChange}
           />
         </div>
 
-        <div className="[grid-area:restaurants]">
+        <div className="lg:[grid-area:restaurants]">
           <ResturantsListing filteredRestaurants={filteredRestaurants} />
         </div>
       </div>
