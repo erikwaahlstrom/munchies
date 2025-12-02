@@ -1,7 +1,7 @@
 // Define your custom colors here - THIS IS THE ONLY FILE YOU EDIT
 export const customColors = {
   // Base colors
-  "base-black": "#080808",
+  "base-black": "#000000",
   "base-white": "#FFFFFF",
   "base-red": "#AF243E",
   "base-green": "#00703A",

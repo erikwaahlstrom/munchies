@@ -86,7 +86,7 @@ const Filters = ({
           >
             DELIVERY TIME
           </Text>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-row gap-3 flex-wrap">
             {deliveryTimeFilters.map((time) => (
               <FilterCheckbox
                 key={`delivery-${time}`}
