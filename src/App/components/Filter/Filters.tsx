@@ -45,9 +45,11 @@ const Filters = ({
     return Array.from(uniqueTimes).sort((a, b) => a - b);
   }, [restaurants]);
 
-
   return (
-    <div className="flex flex-col gap-6 bg-base-white p-6 rounded-lg border border-base-black-10">
+    <div className="flex flex-col gap-8 bg-base-white p-6 rounded-lg border border-base-black-10">
+      <Text as="h3" typography="Regular/24" className="text-base-black">
+        Filters
+      </Text>
       {/* Food type filters */}
       {filters.length > 0 && (
         <div className="flex flex-col gap-3">
