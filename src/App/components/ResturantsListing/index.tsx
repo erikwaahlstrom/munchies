@@ -7,7 +7,7 @@ export const ResturantsListing = ({
 }: {
   filteredRestaurants: Restaurant[];
 }) => (
-  <div className="mt-6">
+  <div>
     <Text
       as="h2"
       typography="Caps-Regular/12"
@@ -21,7 +21,7 @@ export const ResturantsListing = ({
         No restaurants match your filters.
       </Text>
     ) : (
-      <div className="flex flex-col gap-4">
+      <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(330px,1fr))]">
         {filteredRestaurants.map(
           (
             {

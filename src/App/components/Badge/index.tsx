@@ -9,7 +9,7 @@ export interface BadgeProps {
 
 export const Badge = ({ label, status = null }: BadgeProps) => {
   return (
-    <span className="inline-flex items-center h-[28px] rounded-full border-[0.6px] border-base-gray pt-2 pr-3 pb-2 pl-[10px] gap-1 justify-center">
+    <span className="inline-flex items-center h-[28px] rounded-full border-[0.6px] border-base-gray pt-2 pr-3 pb-2 pl-[10px] gap-1 justify-center relative z-3">
       {status !== null ? (
         <StatusBadge status={status} />
       ) : (

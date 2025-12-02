@@ -5,7 +5,6 @@ import { useFilterParams } from "../../../hooks/useFilterParams";
 import { filterRestaurants } from "../../../utils/filterRestaurants";
 import Filters from "App/components/Filter/Filters";
 import { ResturantsListing } from "App/components/ResturantsListing";
-import { CTAButton } from "App/components/CTAButton";
 
 export const Resturants = () => {
   const { restaurants, isLoading, error } = useAllRestaurants();
@@ -45,19 +44,21 @@ export const Resturants = () => {
   }
 
   return (
-    <div className="min-h-screen w-full p-6 flex flex-col items-left">
-      <Logo className="text-base-black" />
+    <div className="min-h-screen w-full p-6">
+      <Logo className="text-base-black mb-6" />
 
-      <CTAButton />
+      <div className="grid grid-cols-[250px_1fr] gap-6 [grid-template-areas:'filters_restaurants']">
+        <div className="[grid-area:filters]">
+          <Filters
+            isFilterActive={isFilterActive}
+            handleFilterChange={handleFilterChange}
+          />
+        </div>
 
-      <div className="flex flex-col gap-3 mt-6">
-        <Filters
-          isFilterActive={isFilterActive}
-          handleFilterChange={handleFilterChange}
-        />
+        <div className="[grid-area:restaurants]">
+          <ResturantsListing filteredRestaurants={filteredRestaurants} />
+        </div>
       </div>
-
-      <ResturantsListing filteredRestaurants={filteredRestaurants} />
     </div>
   );
 };
