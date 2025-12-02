@@ -12,23 +12,24 @@ export const CTACard = ({
 }: Restaurant) => {
   const { data: openStatus } = useRestaurantOpenStatus(id);
   const isOpen = openStatus?.is_open;
+  const deliveryTimeLabel = `${delivery_time_minutes} min`;
 
   return (
     <div key={id} className="p-4 border border-base-gray rounded-lg">
-      <Badge status={openStatus?.is_open} label={isOpen ? "Open" : null} />
-      <Badge label={`${delivery_time_minutes} min`} />
+      <Badge status={isOpen} />
+      <Badge label={deliveryTimeLabel} />
 
       <Text as="h3" typography="Bold/16" className="text-base-black mb-2">
         {name}
       </Text>
 
       <Image
-        alt={name}
-        height="100%"
+        src={image_url}
         key={id}
         loading="lazy"
+        alt={name}
         placeholder=""
-        src={image_url}
+        height="100%"
       />
 
       {typeof delivery_time_minutes === "number" && (

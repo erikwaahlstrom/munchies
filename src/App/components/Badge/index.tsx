@@ -1,18 +1,20 @@
 import React from "react";
-import { Text } from "App/components/Text";
-import { Ellipse } from "assets/media/icons/Ellipse";
+import { StatusBadge } from "App/components/Badge/StatusBadge";
+import TextBadge from "./TextBadge";
 
 export interface BadgeProps {
-  label: React.ReactNode;
-  status?: boolean;
+  label?: React.ReactNode;
+  status?: boolean | null;
 }
 
-export const Badge = ({ label, status = false }: BadgeProps) => {
+export const Badge = ({ label, status = null }: BadgeProps) => {
   return (
     <span className="inline-flex items-center h-[28px] rounded-full border-[0.6px] border-base-gray pt-2 pr-3 pb-2 pl-[10px] gap-1 justify-center">
-      {status ? <Ellipse /> : null}
-
-      <Text typography="Regular/12">{label}</Text>
+      {status !== null ? (
+        <StatusBadge status={status} />
+      ) : (
+        <TextBadge label={label} />
+      )}
     </span>
   );
 };
