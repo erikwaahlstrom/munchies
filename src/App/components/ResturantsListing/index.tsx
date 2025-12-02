@@ -8,14 +8,6 @@ export const ResturantsListing = ({
   filteredRestaurants: Restaurant[];
 }) => (
   <div>
-    <Text
-      as="h2"
-      typography="Caps-Regular/12"
-      className="text-base-black-40 mb-4"
-    >
-      RESTAURANTS ({filteredRestaurants.length})
-    </Text>
-
     {filteredRestaurants.length === 0 ? (
       <Text typography="Regular/14" className="text-base-black-40">
         No restaurants match your filters.

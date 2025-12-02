@@ -44,8 +44,8 @@ export const Resturants = () => {
   }
 
   return (
-    <div className="min-h-screen w-full p-6">
-      <Logo className="text-base-black mb-6" />
+    <div className="min-h-screen w-full p-10">
+      <Logo className="text-base-black mb-12" />
 
       <div className="grid grid-cols-[250px_1fr] gap-5 [grid-template-areas:'filters_restaurants']">
         <div className="[grid-area:filters]">
