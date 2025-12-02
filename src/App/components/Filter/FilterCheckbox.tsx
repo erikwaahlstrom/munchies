@@ -53,10 +53,10 @@ export const FilterCheckbox: React.FC<CheckBoxProps> = ({
     "cursor-pointer",
     "transition-colors",
     filterOptionDisabled
-      ? "border-base-gray bg-transparent text-base-gray cursor-default pointer-events-none"
+      ? "border-base-black-10 bg-transparent text-base-gray cursor-default pointer-events-none"
       : isApplied
       ? "border-base-green bg-base-green text-base-white"
-      : "border-base-gray bg-transparent text-base-black hover:border-base-green",
+      : "border-base-black-10 bg-base-white text-base-black hover:border-base-green",
     isApplied && filterOptionDisabled ? "pointer-events-auto" : "",
   ]
     .filter(Boolean)

@@ -17,7 +17,7 @@ export const customColors = {
   "ui-background-secondary": "#00703A",
 
   // Opacity colors (black)
-  "base-black-40": "rgba(8, 8, 8, 0.40)",
+  "base-black-10": "rgba(8, 8, 8, 0.10)",
 
   // Opacity colors (white)
   "base-white-80": "rgba(255, 255, 255, 0.80)",

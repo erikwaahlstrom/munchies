@@ -18,7 +18,7 @@ export const CTACard = ({
   return (
     <div
       key={id}
-      className={`bg-base-white p-4 border border-base-gray rounded-lg relative overflow-hidden min-h-52 flex flex-col justify-between ${
+      className={`bg-base-white p-4 border border-base-black-10 rounded-lg relative overflow-hidden min-h-52 flex flex-col justify-between ${
         !isOpen
           ? "after:content-[''] after:absolute after:inset-0 after:bg-base-white-80"
           : null
