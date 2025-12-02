@@ -9,63 +9,58 @@ export interface TextStyle {
 }
 
 export const textStyles: Record<string, TextStyle> = {
-  // Regular
   "Regular/14": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
-    fontSize: "1.4rem",
+    fontSize: "0.875rem",
     fontWeight: 400,
     lineHeight: "150%",
-    letterSpacing: "-0.05rem",
+    letterSpacing: "-0.03rem",
     textTransform: "none",
   },
   "Regular/12": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
-    fontSize: "1.2rem",
+    fontSize: "0.75rem",
     fontWeight: 400,
     lineHeight: "100%",
-    letterSpacing: "-0.05rem",
+    letterSpacing: "-0.03rem",
     textTransform: "none",
   },
-
-  // Caps
   "Caps-Regular/12": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
-    fontSize: "1.2rem",
+    fontSize: "0.75rem",
     fontWeight: 590,
     lineHeight: "100%",
-    letterSpacing: "-0.05rem",
+    letterSpacing: "-0.03rem",
     textTransform: "uppercase",
   },
-
-  // Bold
   "Bold/48": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
-    fontSize: "4.8rem",
+    fontSize: "3rem",
     fontWeight: 760,
     lineHeight: "100%",
-    letterSpacing: "-0.1rem",
+    letterSpacing: "-0.06rem",
     textTransform: "none",
   },
   "Bold/16": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
-    fontSize: "1.6rem",
+    fontSize: "1rem",
     fontWeight: 700,
     lineHeight: "150%",
-    letterSpacing: "-0.05rem",
+    letterSpacing: "-0.03rem",
     textTransform: "none",
   },
   "Bold/14": {
     fontFamily: '"Inter", sans-serif',
     fontStyle: "normal",
-    fontSize: "1.4rem",
+    fontSize: "0.875rem",
     fontWeight: 700,
     lineHeight: "150%",
-    letterSpacing: "-0.05rem",
+    letterSpacing: "-0.03rem",
     textTransform: "none",
   },
 };

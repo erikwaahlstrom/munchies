@@ -3,6 +3,7 @@ import { Text } from "App/components/Text";
 import { type Restaurant } from "../../../hooks/useRestaurantData";
 import Image from "App/components/Image";
 import { useRestaurantOpenStatus } from "../../../hooks/useRestaurantData";
+import { CTAFooter } from "App/components/CTACard/CTAFooter";
 
 export const CTACard = ({
   delivery_time_minutes,
@@ -19,10 +20,6 @@ export const CTACard = ({
       <Badge status={isOpen} />
       <Badge label={deliveryTimeLabel} />
 
-      <Text as="h3" typography="Bold/16" className="text-base-black mb-2">
-        {name}
-      </Text>
-
       <Image
         src={image_url}
         key={id}
@@ -37,6 +34,8 @@ export const CTACard = ({
           {delivery_time_minutes} min delivery
         </Text>
       )}
+
+      <CTAFooter name={name} />
     </div>
   );
 };
