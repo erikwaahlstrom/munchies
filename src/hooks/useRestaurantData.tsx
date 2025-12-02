@@ -4,17 +4,17 @@ import * as api from "../api";
 export interface Restaurant {
   id: string;
   name: string;
-  filter_ids?: string[];
-  delivery_time_minutes?: number;
-  price_range_id?: string;
-  [key: string]: unknown;
+  filter_ids: string[];
+  delivery_time_minutes: number;
+  price_range_id: string;
+  rating: number;
+  image_url: string;
 }
 
 export interface Filter {
   id: string;
   name: string;
   image_url: string;
-  [key: string]: unknown;
 }
 
 const useFetchDataById = <T,>(

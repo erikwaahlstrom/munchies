@@ -1,5 +1,6 @@
 import { Text } from "App/components/Text";
 import { type Restaurant } from "../../../hooks/useRestaurantData";
+import { CTACard } from "App/components/CTACard";
 
 export const ResturantsListing = ({
   filteredRestaurants,
@@ -21,21 +22,31 @@ export const ResturantsListing = ({
       </Text>
     ) : (
       <div className="flex flex-col gap-4">
-        {filteredRestaurants.map((restaurant) => (
-          <div
-            key={restaurant.id}
-            className="p-4 border border-base-gray rounded-lg"
-          >
-            <Text as="h3" typography="Bold/16" className="text-base-black mb-2">
-              {restaurant.name}
-            </Text>
-            {typeof restaurant.delivery_time_minutes === "number" && (
-              <Text typography="Regular/14" className="text-base-black-40">
-                {restaurant.delivery_time_minutes} min delivery
-              </Text>
-            )}
-          </div>
-        ))}
+        {filteredRestaurants.map(
+          (
+            {
+              delivery_time_minutes,
+              filter_ids,
+              id,
+              image_url,
+              name,
+              price_range_id,
+              rating,
+            },
+            i
+          ) => (
+            <CTACard
+              key={`${id}-${i}`}
+              delivery_time_minutes={delivery_time_minutes}
+              filter_ids={filter_ids}
+              id={id}
+              image_url={image_url}
+              name={name}
+              price_range_id={price_range_id}
+              rating={rating}
+            />
+          )
+        )}
       </div>
     )}
   </div>
