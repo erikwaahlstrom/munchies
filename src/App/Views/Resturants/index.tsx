@@ -47,7 +47,7 @@ export const Resturants = () => {
     <div className="min-h-screen w-full p-6">
       <Logo className="text-base-black mb-6" />
 
-      <div className="grid grid-cols-[250px_1fr] gap-6 [grid-template-areas:'filters_restaurants']">
+      <div className="grid grid-cols-[250px_1fr] gap-5 [grid-template-areas:'filters_restaurants']">
         <div className="[grid-area:filters]">
           <Filters
             isFilterActive={isFilterActive}

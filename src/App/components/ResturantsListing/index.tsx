@@ -21,7 +21,7 @@ export const ResturantsListing = ({
         No restaurants match your filters.
       </Text>
     ) : (
-      <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(330px,1fr))]">
+      <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(330px,1fr))]">
         {filteredRestaurants.map(
           (
             {
