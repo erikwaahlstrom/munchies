@@ -33,7 +33,7 @@ export const FilterCheckbox: React.FC<CheckBoxProps> = ({
   op,
   handleFilterChange,
   customListingPageUrl,
-  typography = "Regular/14",
+  typography = "Regular/12",
   className = "",
   ...rest
 }) => {
@@ -45,8 +45,8 @@ export const FilterCheckbox: React.FC<CheckBoxProps> = ({
     "items-center",
     "justify-center",
     "w-full",
-    "px-4",
-    "py-3",
+    "px-3",
+    "py-2",
     "rounded-lg",
     "border",
     "border-solid",
@@ -63,7 +63,7 @@ export const FilterCheckbox: React.FC<CheckBoxProps> = ({
     .join(" ");
 
   return (
-    <div className={`w-full ${className}`} {...rest}>
+    <div className={`${className}`} {...rest}>
       <label
         className={labelClasses}
         aria-disabled={filterOptionDisabled}

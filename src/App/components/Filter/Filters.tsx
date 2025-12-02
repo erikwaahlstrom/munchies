@@ -58,7 +58,7 @@ const Filters = ({
           >
             FOOD TYPE
           </Text>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 items-start">
             {filters.map((filter) => (
               <FilterCheckbox
                 key={filter.id}
