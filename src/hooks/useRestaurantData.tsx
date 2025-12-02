@@ -55,7 +55,7 @@ export const useRestaurant = (id: string | null) => {
 };
 
 export const useRestaurantOpenStatus = (id: string | null) => {
-  return useFetchDataById<{ open: boolean }>(id, api.getRestaurantOpenStatus);
+  return useFetchDataById<{ is_open: boolean }>(id, api.getRestaurantOpenStatus);
 };
 
 export const usePriceRange = (id: string | null) => {
