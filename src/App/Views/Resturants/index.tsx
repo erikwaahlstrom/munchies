@@ -52,7 +52,7 @@ export const Resturants = () => {
     <div className="min-h-screen w-full p-5 lg:p-10 overflow-x-hidden">
       <Logo className="text-base-black mb-12" />
 
-      <div className="flex flex-col lg:grid lg:gap-5 lg:grid-cols-[250px_1fr] lg:[grid-template-areas:'filters_filtercheckboxes''filters_restaurants'] gap-5">
+      <div className="flex flex-col lg:grid lg:gap-5 lg:grid-cols-[250px_1fr] lg:[grid-template-areas:'filters_restaurants'] gap-5">
         <div className="lg:[grid-area:filters]">
           <Filters
             isFilterActive={isFilterActive}
@@ -60,8 +60,8 @@ export const Resturants = () => {
           />
         </div>
 
-        <div className="lg:[grid-area:filtercheckboxes] min-w-0">
-          <div className="flex gap-3 items-start overflow-x-auto min-w-0 -mr-10 pr-10">
+        <div className="lg:[grid-area:restaurants] min-w-0">
+          <div className="flex gap-3 items-start overflow-x-auto overflow-y-hidden min-w-0 -mr-10 pr-10 mb-5">
             {filters.map((filter) => (
               <FilterCheckboxAlt
                 key={filter.id}
@@ -78,9 +78,6 @@ export const Resturants = () => {
               />
             ))}
           </div>
-        </div>
-
-        <div className="lg:[grid-area:restaurants] min-w-0">
           <div className="w-full min-w-0 overflow-hidden">
             <ResturantsListing filteredRestaurants={filteredRestaurants} />
           </div>
