@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Logo } from "assets/media/icons/Logo";
+import { Logo } from "assets/media/icons/Logo.tsx";
 import {
   useAllFilters,
   useAllRestaurants,

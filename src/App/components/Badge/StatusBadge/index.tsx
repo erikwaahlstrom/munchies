@@ -1,5 +1,5 @@
 import { Text } from "App/components/Text";
-import { Ellipse } from "assets/media/icons/Ellipse";
+import { Ellipse } from "assets/media/icons/Ellipse.tsx";
 
 export interface StatusBadgeProps {
   status?: boolean;
