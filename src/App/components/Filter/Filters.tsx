@@ -56,7 +56,7 @@ const Filters = ({
       </Text>
       {/* Food type filters */}
       {filters.length > 0 && (
-        <div className="flex flex-col gap-3">
+        <div className="hidden lg:flex flex-col gap-3">
           <Text
             as="h3"
             typography="Caps-Regular/12"

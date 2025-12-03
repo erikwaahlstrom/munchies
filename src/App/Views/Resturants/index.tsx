@@ -50,7 +50,7 @@ export const Resturants = () => {
 
   return (
     <div className="min-h-screen w-full p-5 lg:p-10 overflow-x-hidden">
-      <Logo className="text-base-black mb-12" />
+      <Logo className="text-base-black mb-6 lg:mb-12 lg:w-[270px] lg:h-[40px]" />
 
       <div className="flex flex-col lg:grid lg:gap-5 lg:grid-cols-[250px_1fr] lg:[grid-template-areas:'filters_restaurants'] gap-5">
         <div className="lg:[grid-area:filters]">
