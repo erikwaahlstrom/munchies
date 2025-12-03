@@ -9,7 +9,7 @@ export const ResturantsListing = ({
 }) => (
   <div className="w-full min-w-0">
     <Text typography="Regular/40" className="text-base-black mb-8">
-      Restaurants ({filteredRestaurants.length})
+      Restaurants
     </Text>
     {filteredRestaurants.length === 0 ? (
       <Text typography="Regular/14" className="text-base-black-40">

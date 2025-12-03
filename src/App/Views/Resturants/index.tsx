@@ -61,7 +61,7 @@ export const Resturants = () => {
         </div>
 
         <div className="lg:[grid-area:restaurants] min-w-0">
-          <div className="flex gap-3 items-start overflow-x-auto overflow-y-hidden min-w-0 -mr-10 pr-10 mb-5">
+          <div className="flex gap-3 items-start overflow-x-auto overflow-y-hidden min-w-0 -mr-10 pr-10 mb-5 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             {filters.map((filter) => (
               <FilterCheckboxAlt
                 key={filter.id}
