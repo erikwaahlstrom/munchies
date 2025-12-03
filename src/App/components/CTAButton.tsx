@@ -1,4 +1,4 @@
-import { Arrow } from "assets/media/Icons/Arrow";
+import { Arrow } from "assets/media/icons/Arrow";
 
 const themeMap = {
   primary: {
