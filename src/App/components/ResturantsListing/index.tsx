@@ -8,7 +8,14 @@ export const ResturantsListing = ({
   filteredRestaurants: Restaurant[];
 }) => (
   <div className="w-full min-w-0">
-    <Text typography="Regular/40" className="text-base-black mb-8">
+    {/* Mobile */}
+    <Text typography="Regular/24" className="text-base-black mb-5 md:hidden">
+      Restaurants
+    </Text>
+    <Text
+      typography="Regular/40"
+      className="text-base-black mb-8 hidden md:block"
+    >
       Restaurants
     </Text>
     {filteredRestaurants.length === 0 ? (
