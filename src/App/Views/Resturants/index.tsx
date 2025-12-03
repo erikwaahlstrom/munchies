@@ -49,7 +49,7 @@ export const Resturants = () => {
   }
 
   return (
-    <div className="min-h-screen w-full p-10">
+    <div className="min-h-screen w-full p-5 lg:p-10">
       <Logo className="text-base-black mb-12" />
 
       <div className="flex flex-col lg:grid lg:gap-5 lg:grid-cols-[250px_1fr] lg:[grid-template-areas:'filters_filtercheckboxes''filters_restaurants'] gap-5">
