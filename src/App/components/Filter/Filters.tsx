@@ -46,7 +46,7 @@ const Filters = ({
   }, [restaurants]);
 
   return (
-    <div className="flex flex-col gap-8 lg:bg-base-white lg:p-6 lg:rounded-lg lg:border lg:border-base-black-10">
+    <div className="flex flex-col gap-8 lg:bg-base-white lg:p-6 lg:rounded-lg lg:border lg:border-base-black-10 lg:h-[calc(100vh+80px)]">
       <Text
         as="h3"
         typography="Regular/24"
