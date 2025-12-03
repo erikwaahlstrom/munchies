@@ -33,7 +33,7 @@ const themeMap = {
       "flex-row",
       "items-start",
       "justify-between",
-      "w-full",
+      "w-40",
       "px-4",
       "py-2",
       "h-20",
@@ -79,7 +79,7 @@ const themeMap = {
       "flex-row",
       "items-start",
       "justify-between",
-      "w-full",
+      "w-40",
       "px-4",
       "py-3",
       "h-20",
@@ -163,7 +163,7 @@ export const FilterCheckboxAlt: React.FC<CheckBoxAltProps> = ({
   };
 
   return (
-    <div className={`w-full ${className}`} {...rest}>
+    <div className={`w-40 shrink-0 ${className}`} {...rest}>
       <label
         className={labelClasses}
         aria-disabled={filterOptionDisabled}

@@ -7,7 +7,6 @@ import {
   useAllPriceRanges,
   type Restaurant,
 } from "../../../hooks/useRestaurantData";
-import { FilterCheckboxAlt } from "./FilterCheckboxAlt";
 
 const Filters = ({
   isFilterActive,
@@ -53,7 +52,7 @@ const Filters = ({
         typography="Regular/24"
         className="text-base-black hidden lg:block"
       >
-        Filters
+        Filter
       </Text>
       {/* Food type filters */}
       {filters.length > 0 && (
@@ -65,24 +64,6 @@ const Filters = ({
           >
             FOOD TYPE
           </Text>
-
-          <div className="flex flex-col gap-3 items-start">
-            {filters.map((filter) => (
-              <FilterCheckboxAlt
-                key={filter.id}
-                name={filter.id}
-                label={filter.name}
-                filterOptionDisabled={false}
-                fieldName="filter"
-                op="eq"
-                value={filter.id}
-                isApplied={isFilterActive("filter", filter.id)}
-                handleFilterChange={handleFilterChange}
-                imageUrl={filter.image_url}
-                theme="secondary"
-              />
-            ))}
-          </div>
 
           <div className="flex flex-col gap-3 items-start">
             {filters.map((filter) => (

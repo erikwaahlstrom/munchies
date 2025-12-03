@@ -7,7 +7,7 @@ export const ResturantsListing = ({
 }: {
   filteredRestaurants: Restaurant[];
 }) => (
-  <div>
+  <div className="w-full min-w-0">
     <Text typography="Regular/40" className="text-base-black mb-8">
       Restaurants ({filteredRestaurants.length})
     </Text>
@@ -16,7 +16,7 @@ export const ResturantsListing = ({
         No restaurants match your filters.
       </Text>
     ) : (
-      <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(330px,1fr))]">
+      <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(330px,1fr))] w-full min-w-0">
         {filteredRestaurants.map(
           (
             {
@@ -30,7 +30,7 @@ export const ResturantsListing = ({
             },
             i
           ) => (
-            <div key={`${id}-${i}`}>
+            <div key={`${id}-${i}`} className="min-w-0">
               <CTACard
                 delivery_time_minutes={delivery_time_minutes}
                 filter_ids={filter_ids}
