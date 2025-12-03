@@ -30,6 +30,15 @@ export const CTACard = ({
           <Badge label={deliveryTimeLabel} />
         </div>
 
+        {!isOpen && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Badge
+              label="Opens tomorrow at 12pm"
+              className="bg-ui-background-primary rounded-[4px]"
+            />
+          </div>
+        )}
+
         <div className="absolute -top-6 -right-4">
           <Image
             src={image_url}
