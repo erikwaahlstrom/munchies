@@ -10,7 +10,7 @@ export interface TextStyle {
 
 export const textStyles: Record<string, TextStyle> = {
   "Regular/40": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
     fontSize: "2.5rem",
     fontWeight: 400,
@@ -19,7 +19,7 @@ export const textStyles: Record<string, TextStyle> = {
     textTransform: "none",
   },
   "Regular/24": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
     fontSize: "1.5rem",
     fontWeight: 400,
@@ -28,7 +28,7 @@ export const textStyles: Record<string, TextStyle> = {
     textTransform: "none",
   },
   "Regular/14": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
     fontSize: "0.875rem",
     fontWeight: 400,
@@ -37,7 +37,7 @@ export const textStyles: Record<string, TextStyle> = {
     textTransform: "none",
   },
   "Regular/12": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
     fontSize: "0.75rem",
     fontWeight: 400,
@@ -46,7 +46,7 @@ export const textStyles: Record<string, TextStyle> = {
     textTransform: "none",
   },
   "Caps-Regular/12": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
     fontSize: "0.75rem",
     fontWeight: 590,
@@ -55,16 +55,16 @@ export const textStyles: Record<string, TextStyle> = {
     textTransform: "uppercase",
   },
   "Bold/48": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
-    fontSize: "3rem",
+    fontSize: "3rem", 
     fontWeight: 760,
     lineHeight: "100%",
     letterSpacing: "-0.06rem",
     textTransform: "none",
   },
   "Bold/16": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
     fontSize: "1rem",
     fontWeight: 700,
@@ -73,7 +73,7 @@ export const textStyles: Record<string, TextStyle> = {
     textTransform: "none",
   },
   "Bold/14": {
-    fontFamily: '"Inter", sans-serif',
+    fontFamily: '"-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif"',
     fontStyle: "normal",
     fontSize: "0.875rem",
     fontWeight: 700,

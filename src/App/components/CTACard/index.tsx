@@ -25,8 +25,10 @@ export const CTACard = ({
       }`}
     >
       <div>
-        <Badge status={isOpen} />
-        <Badge label={deliveryTimeLabel} />
+        <div className="flex flex-row gap-2">
+          <Badge status={isOpen} />
+          <Badge label={deliveryTimeLabel} />
+        </div>
 
         <div className="absolute -top-6 -right-4">
           <Image
