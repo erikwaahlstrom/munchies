@@ -121,7 +121,7 @@ const Filters = ({
           >
             PRICE RANGE
           </Text>
-          <div className="flex flex-row gap-3">
+          <div className="flex flex-row gap-3 flex-wrap">
             {priceRanges.map((priceRange) => (
               <FilterCheckbox
                 key={`price-${priceRange.id}`}
