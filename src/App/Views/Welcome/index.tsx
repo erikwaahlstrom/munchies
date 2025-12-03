@@ -1,5 +1,5 @@
 import { Text } from "App/components/Text";
-import { Logo } from "../../../assets/media/icons/Logo";
+import { Logo } from "../../../assets/media/icons/Logo.tsx";
 import { LinkButton } from "App/components/LinkButton";
 
 export const Welcome = () => {

@@ -71,7 +71,7 @@ const imagesPathPlugin = (): Plugin => {
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.VITE_BASE_PATH || "/munchies",
+  // base: process.env.VITE_BASE_PATH || "/munchies",
   plugins: [generateColorsPlugin(), imagesPathPlugin(), react()],
   resolve: {
     alias: {
